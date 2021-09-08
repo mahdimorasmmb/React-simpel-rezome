@@ -4,7 +4,7 @@ import TitleBlock from "./TitleBlock";
 import Socials from './Socials'
 
 
-const PageHeader = ({ imageUrl,name,bgColor }) => {
+const PageHeader = ({ imageUrl,name,bgColor,links }) => {
     return (
         <div className="page-header" style={{backgroundColor:bgColor}}>
             <div className="row">
@@ -13,7 +13,7 @@ const PageHeader = ({ imageUrl,name,bgColor }) => {
                 </div>
                 <div className="col-sm-8 col-md-8 col-lg-8">
                     <TitleBlock name={name} />
-                    <Socials />
+                    <Socials links={links} />
                 </div>
             </div>
         </div>

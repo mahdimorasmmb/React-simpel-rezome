@@ -7,36 +7,51 @@ function App() {
   const imageUrl = "./public/images/photo.png";
   const infolist = [
     {
-        title: "Age",
-        value: 29
+      title: "Age",
+      value: 29
     },
     {
-        title: "Residence",
-        value: "USA"
+      title: "Residence",
+      value: "USA"
     },
     {
-        title: "Adress",
-        value: "Los Angeles"
+      title: "Adress",
+      value: "Los Angeles"
     },
     {
-        title: "Email",
-        value: "email@example.com",
-        url: "mailto:email@example.com"
+      title: "Email",
+      value: "email@example.com",
+      url: "mailto:email@example.com"
     },
     {
-        title: "PageHeader",
-        value: "Los Angeles"
+      title: "PageHeader",
+      value: "Los Angeles"
     },
     {
-        title: "PageHeader",
-        value: "Los Angeles"
+      title: "PageHeader",
+      value: "Los Angeles"
     },
   ]
+
+  const links = [
+    {
+      url: "#",
+      style: "fa-twitter"
+    },
+    {
+      url: "#",
+      style: "fa-facebook"
+    },
+    {
+      url: "#",
+      style: "fa-instagram"
+    }
+  ]
   return (
-          <div className="section-inner start-page-content">
-              <PageHeader imageUrl={imageUrl} name={"mahdi moras"} bgColor={proimeryColor} />
-              <PageContent color={proimeryColor} infolist={infolist}/>
-          </div>
+    <div className="section-inner start-page-content">
+      <PageHeader links={links} imageUrl={imageUrl} name={"mahdi moras"} bgColor={proimeryColor} />
+      <PageContent color={proimeryColor} infolist={infolist} />
+    </div>
   )
 }
 

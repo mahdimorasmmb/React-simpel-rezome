@@ -1,21 +1,8 @@
 import React from "react"
 import Social from "./Social"
 
-const Socials = () => {
-    const links = [
-        {
-            url:"#",
-            style:"fa-twitter"
-        },
-        {
-            url:"#",
-            style:"fa-facebook"
-        },
-        {
-            url:"#",
-            style:"fa-instagram"
-        }
-    ]
+const Socials = ({links}) => {
+   
     return (
         <div className="social-links">
            {
