@@ -2,11 +2,27 @@ import React from "react"
 import Social from "./Social"
 
 const Socials = () => {
+    const links = [
+        {
+            url:"#",
+            style:"fa-twitter"
+        },
+        {
+            url:"#",
+            style:"fa-facebook"
+        },
+        {
+            url:"#",
+            style:"fa-instagram"
+        }
+    ]
     return (
         <div className="social-links">
-            <Social href="#" className="fa fa-twitter" />
-            <Social href="#" className="fa fa-facebook" />
-            <Social href="#" className="fa fa-instagram" />
+           {
+               links.map((item)=>(
+                   <Social href={item.url} className={`fa ${item.style}`}/>
+               ))
+           }
         </div>
     )
 }

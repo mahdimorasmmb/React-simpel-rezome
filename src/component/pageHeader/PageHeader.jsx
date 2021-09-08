@@ -12,7 +12,7 @@ const PageHeader = ({ imageUrl }) => {
                     <Photo imageUrl={imageUrl} />
                 </div>
                 <div className="col-sm-8 col-md-8 col-lg-8">
-                    <TitleBlock />
+                    <TitleBlock name={"mahdi moras"} />
                     <Socials />
                 </div>
             </div>

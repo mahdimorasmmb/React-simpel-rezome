@@ -3,11 +3,19 @@ import ItemsBlock from "./ItemsBlock";
 
 
 
-const TitleBlock = () => {
+const TitleBlock = ({name}) => {
+    const detail = [
+        {
+            text:"Web Designer"
+        },
+        {
+            text:"Frontend-developer"
+        }
+    ]
     return (
         <div className="title-block">
-            <h1>Alex Smith</h1>
-            <ItemsBlock />
+            <h1>{name}</h1>
+            <ItemsBlock info={detail} />
         </div>
     )
 }

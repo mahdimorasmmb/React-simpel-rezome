@@ -2,33 +2,50 @@ import React from "react"
 import { InfoItem, InfoLink } from "./InfoItem";
 
 
-const InfoList = ()=>{
+const InfoList = () => {
+    const infolist = [
+        {
+            title: "Age",
+            value: 29
+        },
+        {
+            title: "Residence",
+            value: "USA"
+        },
+        {
+            title: "Adress",
+            value: "Los Angeles"
+        },
+        {
+            title: "Email",
+            value: "email@example.com",
+            url: "mailto:email@example.com"
+        },
+        {
+            title: "PageHeader",
+            value: "Los Angeles"
+        },
+        {
+            title: "PageHeader",
+            value: "Los Angeles"
+        },
+    ]
     return (
         <div className="col-sm-6 col-md-6 col-lg-6">
             <ul className="info-list">
-                <li>
-                    <InfoItem className="title">Age</InfoItem><InfoItem className="value">29</InfoItem>
-                </li>
-                <li>
-                    <InfoItem className="title">Residence</InfoItem>
-                    <InfoItem className="value">USA</InfoItem>
-                </li>
-                <li>
-                    <InfoItem className="title">Adress</InfoItem>
-                    <InfoItem className="value">Los Angeles</InfoItem>
-                </li>
-                <li>
-                    <InfoItem className="title">Email</InfoItem>
-                    <InfoItem className="value"><InfoLink href="mailto:email@example.com">email@example.com</InfoLink></InfoItem>
-                </li>
-                <li>
-                <InfoItem className="title">PageHeader</InfoItem>
-                    <InfoItem className="value">Los Angeles</InfoItem>
-                </li>
-                <li>
-                <InfoItem className="title">PageHeader</InfoItem>
-                    <InfoItem className="value">Los Angeles</InfoItem>
-                </li>
+                {
+                    infolist.map(({ title, value, url }) => (
+                        <li>
+                            <InfoItem className={'title'}>{title}</InfoItem>
+                            <InfoItem className={"value"}>
+                                    {
+                                        url ? <InfoLink url={url}>{value}</InfoLink> : value
+                                    }
+                            </InfoItem>
+
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     )
