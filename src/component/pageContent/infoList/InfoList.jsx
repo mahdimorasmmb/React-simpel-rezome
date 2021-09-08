@@ -2,34 +2,8 @@ import React from "react"
 import { InfoItem, InfoLink } from "./InfoItem";
 
 
-const InfoList = () => {
-    const infolist = [
-        {
-            title: "Age",
-            value: 29
-        },
-        {
-            title: "Residence",
-            value: "USA"
-        },
-        {
-            title: "Adress",
-            value: "Los Angeles"
-        },
-        {
-            title: "Email",
-            value: "email@example.com",
-            url: "mailto:email@example.com"
-        },
-        {
-            title: "PageHeader",
-            value: "Los Angeles"
-        },
-        {
-            title: "PageHeader",
-            value: "Los Angeles"
-        },
-    ]
+const InfoList = ({color,infolist}) => {
+    
     return (
         <div className="col-sm-6 col-md-6 col-lg-6">
             <ul className="info-list">
@@ -39,7 +13,7 @@ const InfoList = () => {
                             <InfoItem className={'title'}>{title}</InfoItem>
                             <InfoItem className={"value"}>
                                     {
-                                        url ? <InfoLink url={url}>{value}</InfoLink> : value
+                                        url ? <InfoLink color={color} url={url}>{value}</InfoLink> : value
                                     }
                             </InfoItem>
 

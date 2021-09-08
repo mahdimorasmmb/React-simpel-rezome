@@ -7,9 +7,9 @@ export const InfoItem = ({children,className})=>{
     )
 }
 
-export const InfoLink = ({url,children}) => {
+export const InfoLink = ({url,children,color}) => {
     return (
-        <a href={url}>{children}</a>
+        <a style={{color:color}} href={url}>{children}</a>
     )
 }
 

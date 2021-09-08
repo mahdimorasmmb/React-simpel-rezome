@@ -3,11 +3,11 @@ import AboutMe from "./aboutMe/AboutMe";
 import InfoList from "./infoList/InfoList";
 
 
-const PageContent = () => {
+const PageContent = ({color,infolist}) => {
     return (
         <div className="page-content">
-            <AboutMe/>
-            <InfoList/>
+            <AboutMe color={color}/>
+            <InfoList color={color} infolist={infolist}/>
         </div>
     )
 }

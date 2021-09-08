@@ -1,10 +1,10 @@
 import React, { Children } from "react";
 
 
-const AboutMeTitles = ({children}) => {
+const AboutMeTitles = ({children, color}) => {
     return (
         <div className="block-title">
-            <h3>About<span>Me</span></h3>
+            <h3>About<span style={{color:color}}>Me</span></h3>
             <p>
                 {children}
             </p>

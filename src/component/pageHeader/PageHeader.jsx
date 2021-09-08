@@ -4,15 +4,15 @@ import TitleBlock from "./TitleBlock";
 import Socials from './Socials'
 
 
-const PageHeader = ({ imageUrl }) => {
+const PageHeader = ({ imageUrl,name,bgColor }) => {
     return (
-        <div className="page-header">
+        <div className="page-header" style={{backgroundColor:bgColor}}>
             <div className="row">
                 <div className="col-sm-4 col-md-4 col-lg-4">
                     <Photo imageUrl={imageUrl} />
                 </div>
                 <div className="col-sm-8 col-md-8 col-lg-8">
-                    <TitleBlock name={"mahdi moras"} />
+                    <TitleBlock name={name} />
                     <Socials />
                 </div>
             </div>
