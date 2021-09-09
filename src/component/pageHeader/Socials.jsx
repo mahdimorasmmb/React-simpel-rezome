@@ -6,8 +6,8 @@ const Socials = ({links}) => {
     return (
         <div className="social-links">
            {
-               links.map((item)=>(
-                   <Social href={item.url} className={`fa ${item.style}`}/>
+               links.map((item,index)=>(
+                   <Social href={item.url} key={index} className={`fa ${item.style}`}/>
                ))
            }
         </div>

@@ -8,8 +8,8 @@ const InfoList = ({color,infolist}) => {
         <div className="col-sm-6 col-md-6 col-lg-6">
             <ul className="info-list">
                 {
-                    infolist.map(({ title, value, url }) => (
-                        <li>
+                    infolist.map(({ title, value, url },index) => (
+                        <li key={index}>
                             <InfoItem className={'title'}>{title}</InfoItem>
                             <InfoItem className={"value"}>
                                     {

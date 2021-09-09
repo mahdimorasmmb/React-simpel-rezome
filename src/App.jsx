@@ -3,7 +3,7 @@ import PageContent from './component/pageContent/PageContent'
 import PageHeader from './component/pageHeader/PageHeader'
 
 function App() {
-  const proimeryColor = "#ff070753";
+  const proimeryColor = "#07e2ffc7";
   const imageUrl = "./public/images/photo.png";
   const infolist = [
     {
